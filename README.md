@@ -5,11 +5,10 @@
 [![Architecture](https://img.shields.io/badge/Architecture-Clean%20%2B%20MVVM--C-blue.svg)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
 [![Concurrency](https://img.shields.io/badge/Concurrency-Combine-blueviolet.svg)](https://developer.apple.com/documentation/combine)
 [![CI/CD](https://img.shields.io/badge/Fastlane-Integrated-green.svg)](https://fastlane.tools/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**FinTech**, modern iOS geliştirme standartları kullanılarak geliştirilmiş, ölçeklenebilir ve test edilebilir bir kripto para takip ve portföy yönetimi uygulamasıdır. 
+**FinTech** is a scalable, testable, and high-performance cryptocurrency tracking and portfolio management application built using modern iOS development standards.
 
-Bu proje; **Clean Architecture**, **MVVM-C (Coordinator)**, **Reactive Programming (Combine)** ve **Programmatic UI** gibi ileri seviye mühendislik pratiklerini bir araya getirir.
+This project integrates advanced engineering practices such as **Clean Architecture**, **MVVM-C (Coordinator)**, **Reactive Programming (Combine)**, and **Programmatic UI**.
 
 ---
 
@@ -19,95 +18,128 @@ Bu proje; **Clean Architecture**, **MVVM-C (Coordinator)**, **Reactive Programmi
 |:---:|:---:|:---:|
 | <img src="Docs/Screenshots/home.png" width="250"> | <img src="Docs/Screenshots/detail.png" width="250"> | <img src="Docs/Screenshots/portfolio.png" width="250"> |
 
-*(Not: Ekran görüntülerinizi projenizin içinde `Docs/Screenshots` klasörü oluşturarak ekleyebilirsiniz.)*
-
 ---
 
 ## 🌟 Key Features
 
-* **Real-time Market Data:** CoinGecko API entegrasyonu ile canlı kripto verileri.
-* **Reactive UI:** `Combine` framework'ü ile anlık veri akışı ve state yönetimi.
-* **Portfolio Management:** `CoreData` ile yerel veri tabanında alım/satım simülasyonu ve bakiye takibi.
-* **Advanced Charts:** Özel çizilmiş `SparklineView` ile interaktif fiyat grafikleri.
-* **Smart Searching & Sorting:** Combine ile debounced arama ve çoklu sıralama algoritmaları.
-* **Pull-to-Refresh:** Akıllı cache yönetimi ile veri yenileme.
-* **Safety First:** Güçlü hata yönetimi ve kullanıcı dostu uyarı mekanizmaları.
+* **Real-time Market Data:** Live crypto data integration via CoinGecko API.
+* **Reactive UI:** Seamless data flow and state management using the `Combine` framework.
+* **Portfolio Management:** Local simulation of buy/sell operations and balance tracking using `CoreData`.
+* **Advanced Charts:** Interactive price history graphs using a custom-drawn `SparklineView`.
+* **Smart Searching & Sorting:** Debounced search and multiple sorting algorithms powered by Combine.
+* **Pull-to-Refresh:** Smart cache management for data refreshing.
+* **Safety First:** Robust error handling and user-friendly alert mechanisms.
 
 ---
 
 ## 🛠 Tech Stack & Tools
 
-Bu projede kullanılan teknolojiler, endüstri standartları ve performans gözetilerek seçilmiştir.
+Technologies in this project were selected based on industry standards and performance requirements.
 
 | Category | Technology | Reason |
 | :--- | :--- | :--- |
-| **Language** | Swift 5.9 | Modern, güvenli ve hızlı. |
-| **Architecture** | Clean Architecture + MVVM | Sorumlulukların ayrılması (SoC) ve test edilebilirlik. |
-| **Navigation** | Coordinator Pattern | ViewModel'den navigasyon mantığını ayırmak için. |
-| **UI** | UIKit (Programmatic) + SnapKit | Storyboard bağımlılığı olmadan, performanslı ve dinamik arayüzler. |
-| **Reactive** | Combine | Veri akışını ve UI güncellemelerini deklaratif yönetmek için. |
-| **Networking** | Alamofire | Güvenilir, test edilebilir ve generic network katmanı. |
-| **Local Storage** | CoreData | Portföy verilerinin kalıcı ve güvenli saklanması. |
-| **Image Loading** | Kingfisher | Görsellerin asenkron yüklenmesi ve önbelleğe alınması. |
-| **Testing** | XCTest & XCUITest | Business logic ve UI akışlarının doğruluğu için. |
-| **CI/CD** | Fastlane | Testlerin ve süreçlerin otomasyonu. |
-| **Code Quality** | SwiftLint | Kod standartlarının ve kalitesinin korunması. |
+| **Language** | Swift 5.9 | Modern, safe, and fast. |
+| **Architecture** | Clean Architecture + MVVM | Separation of Concerns (SoC) and testability. |
+| **Navigation** | Coordinator Pattern | Decoupling navigation logic from ViewModels. |
+| **UI** | UIKit (Programmatic) + SnapKit | Performant, dynamic interfaces without Storyboard dependencies. |
+| **Reactive** | Combine | Declarative management of data streams and UI updates. |
+| **Networking** | Alamofire | Reliable, testable, and generic networking layer. |
+| **Local Storage** | CoreData | Secure and persistent storage for portfolio data. |
+| **Image Loading** | Kingfisher | Asynchronous image loading and caching. |
+| **Testing** | XCTest & XCUITest | Ensuring integrity of business logic and UI flows. |
+| **CI/CD** | Fastlane | Automation of testing and build processes. |
+| **Code Quality** | SwiftLint | Enforcing code standards and quality. |
 
 ---
 
-## 🏗 Architecture Overview 
+## 🏗 Architecture Overview
 
-[Image of Clean Architecture Diagram]
-
-
-Proje, **Clean Architecture** prensiplerine sıkı sıkıya bağlı kalarak 4 ana katmana ayrılmıştır:
+The project is strictly structured around **Clean Architecture** principles, divided into 4 main layers:
 
 1.  **Domain Layer (Business Logic):**
-    * Uygulamanın "ne yaptığını" tanımlar. Hiçbir framework'e (UIKit, Alamofire vb.) bağımlı değildir.
+    * Defines "what" the app does. Completely independent of any frameworks (UIKit, Alamofire, etc.).
     * *Entities, UseCases, Repository Protocols.*
 2.  **Data Layer (Data Access):**
-    * Verinin nereden geldiğini (API veya CoreData) yönetir.
+    * Manages where data comes from (API or CoreData).
     * *Repositories, DTOs, Endpoints, NetworkManager, CoreDataManager.*
 3.  **Presentation Layer (UI):**
-    * Verinin kullanıcıya nasıl gösterileceğini yönetir.
+    * Manages how data is displayed to the user.
     * *ViewModels, Views (Controllers), Coordinators.*
 4.  **Infrastructure Layer:**
-    * Temel yapı taşları.
+    * Core building blocks.
     * *Extensions, Constants, Utilities.*
 
 ### Dependency Injection
-Tüm bağımlılıklar (Repositories, UseCases, ViewModels), `Builder` pattern kullanılarak dışarıdan enjekte edilmiştir. Bu sayede modüller gevşek bağlı (loosely coupled) ve test edilebilir hale gelmiştir.
+All dependencies (Repositories, UseCases, ViewModels) are injected externally using the `Builder` pattern. This ensures modules are **loosely coupled** and highly testable.
 
 ---
 
 ## 🧪 Testing & Quality Assurance
 
-Proje geliştirilirken TDD (Test Driven Development) prensiplerinden esinlenilmiştir.
+The development process was heavily influenced by **TDD (Test Driven Development)** principles.
 
 ### ✅ Unit Tests
-Business logic (ViewModel ve UseCase katmanları) izole edilerek test edilmiştir.
-* **Mocking:** Repository'ler ve Servisler mocklanarak dış bağımlılıklar olmadan test koşulmuştur.
-* **Combine Testing:** Asenkron veri akışları `Expectation` ve `Cancellables` kullanılarak test edilmiştir.
+Business logic (ViewModel and UseCase layers) is tested in isolation.
+* **Mocking:** Repositories and Services are mocked to test without external dependencies.
+* **Combine Testing:** Asynchronous data streams are tested using `Expectation` and `Cancellables`.
 
 ### 🤖 UI Tests (Automation)
-Kritik kullanıcı akışları (User Journeys) robotlar tarafından test edilmektedir.
-* *Örn: Uygulama açılışı -> Liste yüklenmesi -> Detay sayfasına geçiş.*
+Critical User Journeys are verified through automated UI tests.
+* *Example: App Launch -> Load List -> Navigate to Detail Page.*
 
 ### 🛡️ Code Quality (Linting)
-Projede **SwiftLint** entegre edilmiştir. Her derleme (build) işleminde kod kalitesi taranır ve standart dışı yazımlar otomatik olarak raporlanır.
+**SwiftLint** is integrated into the build phase. Code quality is scanned during every build, and non-standard patterns are automatically reported.
 
 ---
 
 ## 🚀 CI/CD & Automation (Fastlane)
 
-Manuel süreçleri ortadan kaldırmak için **Fastlane** kurulmuştur.
+**Fastlane** has been set up to eliminate manual processes.
 
-Tek bir komut ile:
-1.  Proje temizlenir (Clean).
-2.  Derlenir (Build).
-3.  Tüm Unit Testler ve UI Testler simülatörde çalıştırılır.
-4.  Sonuç raporlanır.
+With a single command, the system:
+1.  Cleans the project.
+2.  Builds the app.
+3.  Runs all Unit and UI Tests in the simulator.
+4.  Reports the results.
 
-Otomasyonu çalıştırmak için:
+To run the automation:
 ```bash
 bundle exec fastlane tests
+```
+
+## 📥 Installation & Setup
+
+Follow the steps below to run the project on your local machine:
+
+1. **Clone the Repository:**
+
+ ```bash
+ git clone [https://github.com/username/FinTech.git](https://github.com/username/FinTech.git)
+ cd FinTech
+```
+
+2. **Install Tools (Optional - For Fastlane): If you plan to run tests via terminal, install Bundler.**
+```bash
+gem install bundler
+bundle install --path vendor/bundle
+
+```
+
+
+3. **Open the Project: Since packages (Alamofire, SnapKit, etc.) are managed via Swift Package Manager (SPM), no pod install is required.**
+```bash
+open FinTech.xcodeproj
+
+```
+
+4. **Wait for Package Resolution: Xcode will automatically fetch and resolve SPM packages upon opening.**
+5. **Run: Press Cmd + R to launch the app!**
+
+---
+
+## 🧠 Engineering Highlights (What makes this special?)
+
+* **Memory Management:** Retain Cycles are meticulously prevented using ``[weak self]`` patterns and verified via the Memory Graph Debugger.
+* **SOLID Principles:** All classes are designed adhering to Single Responsibility and Dependency Inversion principles.
+* **Protocol Oriented Programming:** Communication is handled via abstractions (Interfaces) to maximize testability.
+* **Strategy Pattern:** Visual states of assets (Bullish, Bearish, Neutral) are managed using the Strategy Design Pattern.
