@@ -6,15 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5B9262962F37A18B00737507 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5B9262952F37A18B00737507 /* Alamofire */; };
+		5B92629B2F37A1AC00737507 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5B92629A2F37A1AC00737507 /* SnapKit */; };
+		5B9262A02F37A1C500737507 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5B92629F2F37A1C500737507 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BD3A09E2F391BF000777C1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B9262742F37A07400737507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B92627B2F37A07400737507;
+			remoteInfo = FinTech;
+		};
+		5BE133AF2F3888A3004C10FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B9262742F37A07400737507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B92627B2F37A07400737507;
+			remoteInfo = FinTech;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5B92627C2F37A07400737507 /* FinTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD3A0982F391BF000777C1E /* FinTechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinTechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD3A0A42F39250300777C1E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .swiftlint.yml; sourceTree = "<group>"; };
+		5BE133AB2F3888A3004C10FE /* FinTechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinTechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		5B92628E2F37A07500737507 /* Exceptions for "FinTech" folder in "FinTech" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resources/Info.plist,
 			);
 			target = 5B92627B2F37A07400737507 /* FinTech */;
 		};
@@ -29,10 +55,37 @@
 			path = FinTech;
 			sourceTree = "<group>";
 		};
+		5BD3A0992F391BF000777C1E /* FinTechUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FinTechUITests;
+			sourceTree = "<group>";
+		};
+		5BE133AC2F3888A3004C10FE /* FinTechTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FinTechTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5B9262792F37A07400737507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B92629B2F37A1AC00737507 /* SnapKit in Frameworks */,
+				5B9262962F37A18B00737507 /* Alamofire in Frameworks */,
+				5B9262A02F37A1C500737507 /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BD3A0952F391BF000777C1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BE133A82F3888A3004C10FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,7 +98,10 @@
 		5B9262732F37A07400737507 = {
 			isa = PBXGroup;
 			children = (
+				5BD3A0A42F39250300777C1E /* .swiftlint.yml */,
 				5B92627E2F37A07400737507 /* FinTech */,
+				5BE133AC2F3888A3004C10FE /* FinTechTests */,
+				5BD3A0992F391BF000777C1E /* FinTechUITests */,
 				5B92627D2F37A07400737507 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				5B92627C2F37A07400737507 /* FinTech.app */,
+				5BE133AB2F3888A3004C10FE /* FinTechTests.xctest */,
+				5BD3A0982F391BF000777C1E /* FinTechUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +126,7 @@
 				5B9262782F37A07400737507 /* Sources */,
 				5B9262792F37A07400737507 /* Frameworks */,
 				5B92627A2F37A07400737507 /* Resources */,
+				5BD3A0A32F3924CF00777C1E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -78,10 +137,59 @@
 			);
 			name = FinTech;
 			packageProductDependencies = (
+				5B9262952F37A18B00737507 /* Alamofire */,
+				5B92629A2F37A1AC00737507 /* SnapKit */,
+				5B92629F2F37A1C500737507 /* Kingfisher */,
 			);
 			productName = FinTech;
 			productReference = 5B92627C2F37A07400737507 /* FinTech.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5BD3A0972F391BF000777C1E /* FinTechUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BD3A0A02F391BF000777C1E /* Build configuration list for PBXNativeTarget "FinTechUITests" */;
+			buildPhases = (
+				5BD3A0942F391BF000777C1E /* Sources */,
+				5BD3A0952F391BF000777C1E /* Frameworks */,
+				5BD3A0962F391BF000777C1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BD3A09F2F391BF000777C1E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5BD3A0992F391BF000777C1E /* FinTechUITests */,
+			);
+			name = FinTechUITests;
+			packageProductDependencies = (
+			);
+			productName = FinTechUITests;
+			productReference = 5BD3A0982F391BF000777C1E /* FinTechUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		5BE133AA2F3888A3004C10FE /* FinTechTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BE133B12F3888A3004C10FE /* Build configuration list for PBXNativeTarget "FinTechTests" */;
+			buildPhases = (
+				5BE133A72F3888A3004C10FE /* Sources */,
+				5BE133A82F3888A3004C10FE /* Frameworks */,
+				5BE133A92F3888A3004C10FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BE133B02F3888A3004C10FE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5BE133AC2F3888A3004C10FE /* FinTechTests */,
+			);
+			name = FinTechTests;
+			packageProductDependencies = (
+			);
+			productName = FinTechTests;
+			productReference = 5BE133AB2F3888A3004C10FE /* FinTechTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +204,14 @@
 					5B92627B2F37A07400737507 = {
 						CreatedOnToolsVersion = 26.2;
 					};
+					5BD3A0972F391BF000777C1E = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 5B92627B2F37A07400737507;
+					};
+					5BE133AA2F3888A3004C10FE = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 5B92627B2F37A07400737507;
+					};
 				};
 			};
 			buildConfigurationList = 5B9262772F37A07400737507 /* Build configuration list for PBXProject "FinTech" */;
@@ -107,12 +223,19 @@
 			);
 			mainGroup = 5B9262732F37A07400737507;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5B9262942F37A18B00737507 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5B9262992F37A1AC00737507 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				5B92629E2F37A1C500737507 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5B92627D2F37A07400737507 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				5B92627B2F37A07400737507 /* FinTech */,
+				5BE133AA2F3888A3004C10FE /* FinTechTests */,
+				5BD3A0972F391BF000777C1E /* FinTechUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -125,7 +248,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BD3A0962F391BF000777C1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BE133A92F3888A3004C10FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BD3A0A32F3924CF00777C1E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B9262782F37A07400737507 /* Sources */ = {
@@ -135,7 +293,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BD3A0942F391BF000777C1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BE133A72F3888A3004C10FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BD3A09F2F391BF000777C1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B92627B2F37A07400737507 /* FinTech */;
+			targetProxy = 5BD3A09E2F391BF000777C1E /* PBXContainerItemProxy */;
+		};
+		5BE133B02F3888A3004C10FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B92627B2F37A07400737507 /* FinTech */;
+			targetProxy = 5BE133AF2F3888A3004C10FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5B9262902F37A07500737507 /* Debug */ = {
@@ -146,11 +331,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JC76GUB86N;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FinTech/Info.plist;
+				INFOPLIST_FILE = FinTech/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FinTech;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -178,11 +364,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JC76GUB86N;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FinTech/Info.plist;
+				INFOPLIST_FILE = FinTech/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FinTech;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,6 +510,88 @@
 			};
 			name = Release;
 		};
+		5BD3A0A12F391BF000777C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JC76GUB86N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = erenaskin.FinTechUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FinTech;
+			};
+			name = Debug;
+		};
+		5BD3A0A22F391BF000777C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JC76GUB86N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = erenaskin.FinTechUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FinTech;
+			};
+			name = Release;
+		};
+		5BE133B22F3888A3004C10FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JC76GUB86N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = erenaskin.FinTechTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinTech.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FinTech";
+			};
+			name = Debug;
+		};
+		5BE133B32F3888A3004C10FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JC76GUB86N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = erenaskin.FinTechTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinTech.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FinTech";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -344,7 +613,70 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5BD3A0A02F391BF000777C1E /* Build configuration list for PBXNativeTarget "FinTechUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BD3A0A12F391BF000777C1E /* Debug */,
+				5BD3A0A22F391BF000777C1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BE133B12F3888A3004C10FE /* Build configuration list for PBXNativeTarget "FinTechTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BE133B22F3888A3004C10FE /* Debug */,
+				5BE133B32F3888A3004C10FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B9262942F37A18B00737507 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+		5B9262992F37A1AC00737507 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		5B92629E2F37A1C500737507 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B9262952F37A18B00737507 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B9262942F37A18B00737507 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5B92629A2F37A1AC00737507 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B9262992F37A1AC00737507 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		5B92629F2F37A1C500737507 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B92629E2F37A1C500737507 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B9262742F37A07400737507 /* Project object */;
 }

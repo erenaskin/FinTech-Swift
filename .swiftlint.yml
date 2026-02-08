@@ -1,0 +1,19 @@
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+  - force_cast
+  - function_body_length
+
+opt_in_rules:
+  - empty_count
+  - empty_string
+  - force_try
+
+included:
+  - FinTech
+
+excluded:
+  - Pods
+  - FinTechTests
+  - FinTechUITests
+  - fastlane

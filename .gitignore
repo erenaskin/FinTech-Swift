@@ -1,0 +1,30 @@
+# Xcode
+.DS_Store
+*/.DS_Store
+*.derivedData
+*.xcuserstate
+xcuserdata/
+DerivedData/
+build/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Fastlane
+fastlane/test_output
+fastlane/report.xml
+fastlane/screenshots
+fastlane/README.md
+
+# Bundler / Ruby
+vendor/
+.bundle/
+Gemfile.lock
+
+# Swift Package Manager
+.swiftpm
+.build/
+
+# CocoaPods (Eğer ileride kullanırsan)
+Pods/
